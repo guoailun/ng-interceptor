@@ -1,0 +1,47 @@
+<p class="Highlight">home works!</p>
+<p title="Highlight">Highlight me!</p>
+<p>aaaaaaa</p>
+
+<span>sssss</span>
+<!-- <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+  <label for="name"
+    >Name <input class="form-control" name="name" ngModel required />
+  </label>
+  <label for="pwd"
+    >Pwd <input class="form-control" name="pwd" ngModel required />
+  </label>
+  <input ref-fax placeholder="fax number" />
+
+  <button type="submit">Submit</button>
+  <button (click)="callFax(fax.value)">Fax</button>
+
+</form>
+<div>{{itemForm.form.valid}}</div>
+<div [hidden]="!itemForm.form.valid">
+  <p>{{ submitMessage }}</p>
+</div>
+<div> 
+  <p>children</p>
+  <button (click)="child1.update('parent click1')">parent click child fun</button>
+  <button (click)="fun2()">parent click child fun2</button>
+
+  <app-child1 #child1 [clearanceItem]="123456" (buyEvent)="crossOffItem($event)"></app-child1>
+</div> -->
+
+<h2>Mission Control</h2>
+    <button (click)="announce()">Announce mission</button>
+    <!-- <app-child1 *ngFor="let astronaut of astronauts"
+      [astronaut]="astronaut">
+    </app-child1> -->
+    <h3>History</h3>
+    <ul>
+      <li *ngFor="let event of history">{{event}}</li>
+    </ul>
+
+    <app-child2></app-child2>
+
+<div class="title">parent</div>
+<h2>Power Booster</h2>
+<p>Super power boost: {{2 | myPipe: 10}}</p>
+<p>Super power boost: {{2 | myPipe: 9}}</p>
+<button nz-button nzType="primary">Primary</button>

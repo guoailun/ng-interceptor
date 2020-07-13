@@ -1,0 +1,34 @@
+<p>gouzi works!</p>
+<input [(ngModel)]="heroname" />
+<button (click)="add()">add</button>
+<button (click)="reset()">reset</button>
+
+<div *ngFor="let hero of heroes" appSpy class="heroes">
+  {{hero}}
+</div>
+
+<h3>child3</h3>
+<label for="propetryName"
+>propetryName <input class="form-control" name="propetryName" [(ngModel)]="propetryName" required />
+</label>
+<label for="deepPropetryName"
+>deepPropetryName <input class="form-control" name="deepPropetryName" [(ngModel)]="deepPropetryName.name" required />
+</label>
+<app-child3 [propetryName]="propetryName" [deepPropetryName]="deepPropetryName"></app-child3>
+
+<h3>自定义指令</h3>
+<p>
+  The condition is currently {{condition}}.
+  <button
+    (click)="condition = !condition">
+    Toggle condition to {{condition ? 'false' : 'true'}}
+  </button>
+</p>
+<p *appUnless="condition">
+  (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!condition">
+  (B) Although the condition is true,
+  this paragraph is displayed because appUnless is set to false.
+</p>

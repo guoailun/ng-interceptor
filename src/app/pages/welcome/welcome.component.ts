@@ -1,24 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { BaseService } from '../../service/base.service';
+import { Component, OnInit } from "@angular/core";
+import { BaseService } from "../../service/base.service";
+import { WelcomeService } from "./welcome.service";
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.less']
+  selector: "app-welcome",
+  templateUrl: "./welcome.component.html",
+  styleUrls: ["./welcome.component.less"],
 })
 export class WelcomeComponent implements OnInit {
+  constructor(private welcomeService: WelcomeService) {}
 
-  constructor(private baseService: BaseService) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  getAllProject() {
+    this.welcomeService.getAllProjects().subscribe(
+      (data) => {
+        // console.log("data", data);
+      },
+      (error) => {
+        console.log("error", error);
+      }
+    );
+
+    this.welcomeService.getNotesUsers().subscribe(
+      (data) => {
+        // console.log("data", data);
+      },
+      (error) => {
+        console.log("error", error);
+      }
+    );
   }
-
-  getAllProject () {
-    // this.baseService.getConfig().subscribe(data => {
-    //   console.log('data', data);
-    // }, (error) => {
-    //     console.log('error', error);
-    // })
-  }
-
 }

@@ -1,14 +1,13 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
 
-import { WelcomeRoutingModule } from './welcome-routing.module';
+import { WelcomeRoutingModule } from "./welcome-routing.module";
 
-import { WelcomeComponent } from './welcome.component';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
-
+import { WelcomeComponent } from "./welcome.component";
+import { NgZorroAntdModule } from "ng-zorro-antd";
 
 @NgModule({
   imports: [WelcomeRoutingModule, NgZorroAntdModule],
   declarations: [WelcomeComponent],
-  exports: [WelcomeComponent]
+  exports: [WelcomeComponent],
 })
-export class WelcomeModule { }
+export class WelcomeModule {}

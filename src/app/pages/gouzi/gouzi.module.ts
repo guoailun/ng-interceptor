@@ -8,18 +8,14 @@ import { Child3Component } from '../child3/child3.component';
 import { UnlessDirective } from 'src/app/directive/unless.directive';
 
 const routes: Routes = [
-  {
-      path: '',
-      component: GouziComponent
-  }
+	{
+		path: '',
+		component: GouziComponent
+	}
 ];
 
 @NgModule({
-  declarations: [GouziComponent, SpyDirective, Child3Component, UnlessDirective],
-  imports: [
-  CommonModule,
-    FormsModule,
-    RouterModule.forChild(routes)
-  ]
+	declarations: [ GouziComponent, SpyDirective, Child3Component, UnlessDirective ],
+	imports: [ CommonModule, FormsModule, RouterModule.forChild(routes) ]
 })
-export class GouziModule { }
+export class GouziModule {}

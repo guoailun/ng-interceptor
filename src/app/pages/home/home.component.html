@@ -29,19 +29,30 @@
 </div> -->
 
 <h2>Mission Control</h2>
-    <button (click)="announce()">Announce mission</button>
-    <!-- <app-child1 *ngFor="let astronaut of astronauts"
+<button (click)="announce()">Announce mission</button>
+<!-- <app-child1 *ngFor="let astronaut of astronauts"
       [astronaut]="astronaut">
     </app-child1> -->
-    <h3>History</h3>
-    <ul>
-      <li *ngFor="let event of history">{{event}}</li>
-    </ul>
+<h3>History</h3>
+<ul>
+  <li *ngFor="let event of history">{{ event }}</li>
+</ul>
 
-    <app-child2></app-child2>
+<app-child2></app-child2>
 
 <div class="title">parent</div>
 <h2>Power Booster</h2>
-<p>Super power boost: {{2 | myPipe: 10}}</p>
-<p>Super power boost: {{2 | myPipe: 9}}</p>
+<p>Super power boost: {{ 2 | myPipe: 10 }}</p>
+<p>Super power boost: {{ 2 | myPipe: 9 }}</p>
 <button nz-button nzType="primary">Primary</button>
+<h2>First Component</h2>
+
+<nav>
+  <ul>
+    <li><a routerLink="child-a">Child A</a></li>
+    <!-- <li><a routerLink="child-b">Child B</a></li> -->
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+<!-- <div>home end</div> -->
